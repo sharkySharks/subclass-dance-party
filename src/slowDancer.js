@@ -6,10 +6,10 @@ makeSlowDancer.prototype = Object.create(makeDancer.prototype);
 
 makeSlowDancer.prototype.constructor = makeSlowDancer;
 
-makeBlinkyDancer.prototype.step = function(){
+makeSlowDancer.prototype.step = function(){
  
   makeDancer.prototype.step.call(this);
-
-  this.$node.css.animate({top: "+=100", left: "+=75"}, 3000);
+  var slowDown = function() { this.$node.animate({top: "-=290", left: "+=15"}, 2600 ); };
+  this.$node.animate({ top: "+=300", left: "+=15" }, 3000, slowDown.call(this) );
   // this.$node.toggle();
 };
