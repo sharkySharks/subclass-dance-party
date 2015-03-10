@@ -25,11 +25,21 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
-
-.thirdDancer {
-  border:20px solid blue;
-  border-radius:20px;
+.alexDancer {
+  border: none;
+  content:url("alexhead.png");
+  /*border:10px solid blue;*/
+  /*border-radius:10px;*/
+  /*width: 20%;*/
+  height: 20%;
   position:absolute;
-  width: 100px;
-  
+}
+.robinDancer {
+  border: none;
+  content:url("robinhead.png");
+  /*border:10px solid blue;*/
+  /*border-radius:10px;*/
+  position:absolute;
+  width: 20%;
+  height: 10%;
 }

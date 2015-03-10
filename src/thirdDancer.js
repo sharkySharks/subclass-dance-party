@@ -1,6 +1,7 @@
 var makeThirdDancer = function (top, left, timeBetweenSteps){
 	makeDancer.call(this, top, left, timeBetweenSteps);
-	this.$node = $('<span class="thirdDancer dancer"></span>');
+	this.$node.addClass("robinDancer");
+
 };
 
 makeThirdDancer.prototype = Object.create(makeDancer.prototype);
@@ -13,9 +14,9 @@ makeThirdDancer.prototype.step = function(){
 	//var shakeIt = function() 
 	// this.$node.effect("shake", {times:4}, 1000);
 	//this.$node.effect("shake", 3000, shakeIt.call(this) );
-	  var flatten = function() { this.$node.animate({ top: "+=" +  tops, left: "-="+ lefts - 200, width: "+=50px" }, 800 ); };
-   var tops = (Math.random()*2000);
-   var lefts = (Math.random()*1000);
-  this.$node.animate({ top: "-=" + tops, left: "+=" + lefts, width: "-=50px" }, 1000, flatten.call(this) );
+   var flatten = function() { this.$node.animate({ top: "+=" + tops, right: "-=100", width: "+=40%", height: "-=20%" }, 800 ); };
+   var tops = (Math.random()*20);
+   var lefts = (Math.random()*200);
+  this.$node.animate({ right: "+=200" , width: "-=40%", height: "+=20%" }, 1000, flatten.call(this) );
 	
 };
