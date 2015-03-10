@@ -13,8 +13,9 @@ makeThirdDancer.prototype.step = function(){
 	//var shakeIt = function() 
 	// this.$node.effect("shake", {times:4}, 1000);
 	//this.$node.effect("shake", 3000, shakeIt.call(this) );
-	  var flatten = function() { this.$node.animate({ top: "+=" + tops, left: "+=15"}, 800 ); };
+	  var flatten = function() { this.$node.animate({ top: "+=" +  tops, left: "-="+ lefts - 200, width: "+=50px" }, 800 ); };
    var tops = (Math.random()*2000);
-  this.$node.animate({ top: "-=" + tops, left: "+=15" }, 1000, flatten.call(this) );
+   var lefts = (Math.random()*1000);
+  this.$node.animate({ top: "-=" + tops, left: "+=" + lefts, width: "-=50px" }, 1000, flatten.call(this) );
 	
 };
