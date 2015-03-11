@@ -2,6 +2,7 @@ $(document).ready(function(){
   window.dancers = [];
 
   $(".addDancerButton").on("click", function(event){
+    for (var i = 0; i < 30; i++) {
     /* This function sets up the click handlers for the create-dancer
      * buttons on dancefloor.html. You should only need to make one small change to it.
      * As long as the "data-dancer-maker-function-name" attribute of a
@@ -28,6 +29,22 @@ $(document).ready(function(){
       Math.random() * 1000
     );
     $('body').append(dancer.$node);
+    window.dancers.push(dancer.$node);
+    }
   });
+
+$(".roundUpDancersButton").on("click", function(event){
+  
+  $('span:animated').stop(true, true).fadeOut().fadeIn().fadeOut().fadeIn();
+  for (var i=0; i<window.dancers.length; i++){
+    // console.log(window.dancers[i]);
+    window.dancers[i][0].style.top = "400px";
+    console.log("waaa")
+  }
+  
+  
+});
+
+ $(document).on('mouseover', '.dancer', function() { $(this).stop(true, true).animate( { width: "+=80%", height: "+75%" } ).animate( { width: "-=100%", height: "-90%" } ); } )
 });
 
