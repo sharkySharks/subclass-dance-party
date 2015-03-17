@@ -31,26 +31,19 @@ body, a:link, a:visited, a:active{
 .alexDancer {
   border: none;
   content:url("alexhead.png");
-  /*border:10px solid blue;*/
-  /*border-radius:10px;*/
-  /*width: 20%;*/
   height: 20%;
   position:absolute;
 }
 .robinDancer {
   border: none;
   content:url("robinhead.png");
-  /*border:10px solid blue;*/
-  /*border-radius:10px;*/
   position:absolute;
   width: 20%;
   height: 10%;
 }
 .bob {
-   border: none;
+  border: none;
   content:url("Pga3sc2RSRgBO.gif");
-  /*border:10px solid blue;*/
-  /*border-radius:10px;*/
   position:absolute;
   width: 6%;
   height: 15%;
