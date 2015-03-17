@@ -1,16 +1,16 @@
-var makeAlexDancer = function (top, left, timeBetweenSteps) {
-  makeDancer.call(this, top, left, timeBetweenSteps);
+var AlexDancer = function (top, left, timeBetweenSteps) {
+  Dancer.call(this, top, left, timeBetweenSteps);
   // this.$node = $('<img src="alexhead.png" class="thirdDancer"></img>');
   this.$node.addClass("alexDancer");
 };
 
-makeAlexDancer.prototype = Object.create(makeDancer.prototype);
+AlexDancer.prototype = Object.create(Dancer.prototype);
 
-makeAlexDancer.prototype.constructor = makeAlexDancer;
+AlexDancer.prototype.constructor = AlexDancer;
 
-makeAlexDancer.prototype.step = function(){
+AlexDancer.prototype.step = function(){
  
-  makeDancer.prototype.step.call(this);
+  Dancer.prototype.step.call(this);
   var sideStep = function() { this.$node.animate({ left: "-=10"}, 500 ); };
 // var tops = (Math.random()*20);
    var lefts = (Math.random()*500);

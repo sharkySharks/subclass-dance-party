@@ -1,15 +1,15 @@
-var makeThirdDancer = function (top, left, timeBetweenSteps){
-	makeDancer.call(this, top, left, timeBetweenSteps);
+var ThirdDancer = function (top, left, timeBetweenSteps){
+	Dancer.call(this, top, left, timeBetweenSteps);
 	this.$node.addClass("robinDancer");
 
 };
 
-makeThirdDancer.prototype = Object.create(makeDancer.prototype);
+ThirdDancer.prototype = Object.create(Dancer.prototype);
 
-makeThirdDancer.prototype.constructor = makeThirdDancer;
+ThirdDancer.prototype.constructor = ThirdDancer;
 
-makeThirdDancer.prototype.step = function(){
-	makeDancer.prototype.step.call(this);
+ThirdDancer.prototype.step = function(){
+	Dancer.prototype.step.call(this);
 
 	//var shakeIt = function() 
 	// this.$node.effect("shake", {times:4}, 1000);
